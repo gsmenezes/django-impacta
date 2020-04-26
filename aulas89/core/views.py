@@ -2,7 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return render(request, "index.html")
+    context = {
+        'title' : 'E-commerce FIT'
+    }
+    return render(request, "index.html", context)
     
 
 # Create your views here.
